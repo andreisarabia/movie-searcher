@@ -1,0 +1,25 @@
+{
+  "name": "movie-searcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "node_modules/.bin/nodemon server/index.js",
+    "dev:react": "cd client && npm run start",
+    "build": "cd client && npm run build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "production": "npm run build && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4"
+  }
+}
