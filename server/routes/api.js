@@ -8,8 +8,8 @@ const httpApi = axios.create({
   baseURL: `https://www.omdbapi.com/?apikey=${config.get('omdbKey')}`,
 });
 
-const exampleSearch = require('../../example-search.json');
-const exampleResult = require('../../example-result.json');
+const exampleSearch = require('../../data/example-search.json');
+const exampleResult = require('../../data/example-result.json');
 
 const router = express.Router();
 

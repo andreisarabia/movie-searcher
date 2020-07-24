@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import SearchResult from './components/SearchResult';
@@ -33,9 +32,9 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <Router>
+      <>
         <Navbar onSearchTitle={query => this.searchMovieInfo(query)} />
-
+      
         <main>
           {this.state.mostRecentQuery === '' ? (
             <h2>Search for a movie title</h2>
@@ -51,7 +50,7 @@ export default class App extends React.Component {
             </section>
           )}
         </main>
-      </Router>
+      </>
     );
   }
 }
